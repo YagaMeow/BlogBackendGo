@@ -1,0 +1,6 @@
+app:
+  env: local
+  port: 8889
+  app_name: yagami_blog_v1
+  app_url: http://localhost
+  db_type: mysql
