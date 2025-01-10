@@ -4,3 +4,13 @@ app:
   app_name: yagami_blog_v1
   app_url: http://localhost
   db_type: mysql
+zap:
+  level: info
+  prefix: "[yagami_blog/server]"
+  format: console
+  director: log
+  encode_level: LowercaseColorLeveleEncoder
+  stacktrace_key: stacktrace
+  max_age: 1
+  show_line: true
+  log_in_console: true
