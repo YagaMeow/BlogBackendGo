@@ -2,11 +2,11 @@ package core
 
 import (
 	"blog-backend/global"
+	"blog-backend/initialize"
 	"fmt"
-	"net/http"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 type server interface {
@@ -14,18 +14,16 @@ type server interface {
 }
 
 func Run() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
+
+	Router := initialize.Routers()
 
 	address := fmt.Sprintf(":%s", global.YAGAMI_CONFIG.App.Port)
-	s := InitServer(address, r)
+	s := InitServer(address, Router)
 
-	time.Sleep(10 & time.Millisecond)
+	global.YAGAMI_LOGGER.Info("server run success on", zap.String("address", address))
 
-	fmt.Println("监听端口", address)
+	time.Sleep(10 * time.Millisecond)
 
-	s.ListenAndServe()
+	global.YAGAMI_LOGGER.Error(s.ListenAndServe().Error())
 
 }
