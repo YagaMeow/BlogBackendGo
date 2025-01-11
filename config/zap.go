@@ -19,7 +19,7 @@ import (
 */
 type Zap struct {
 	Level         string `mapstructure:"level" json:"level" yaml:"level"`
-	Prefix        string `mapstructure:"prefix_string" json:"prefix_string" yaml:"prefix_string"`
+	Prefix        string `mapstructure:"prefix" json:"prefix" yaml:"prefix"`
 	Format        string `mapstructure:"format" json:"format" yaml:"format"`
 	Director      string `mapstructure:"director" json:"director" yaml:"director"`
 	EncodeLevel   string `mapstructure:"encode_level" json:"encode_level" yaml:"encode_level"`

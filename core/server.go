@@ -15,6 +15,8 @@ type server interface {
 
 func Run() {
 
+	initialize.Redis()
+
 	Router := initialize.Routers()
 
 	address := fmt.Sprintf(":%s", global.YAGAMI_CONFIG.App.Port)

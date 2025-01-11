@@ -6,7 +6,7 @@ app:
   db_type: mysql
 zap:
   level: info
-  prefix: "[yagami_blog/server]"
+  prefix: '[yagami_blog/server]'
   format: console
   director: log
   encode_level: LowercaseColorLeveleEncoder
@@ -28,3 +28,7 @@ mysql:
   max_open_conns: 100
   log_mode: error
   log_zap: false
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""
