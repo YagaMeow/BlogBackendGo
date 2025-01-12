@@ -1,7 +1,9 @@
 package system
 
 import (
+	"blog-backend/dao/common/response"
 	"blog-backend/dao/system"
+	systemReq "blog-backend/dao/system/request"
 	"fmt"
 	"net/http"
 
@@ -9,6 +11,29 @@ import (
 )
 
 type UserApi struct{}
+
+func (u *UserApi) Login(c *gin.Context) {
+	var l systemReq.Login
+	err := c.ShouldBindJSON(&l)
+	key := c.ClientIP()
+
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+	}
+	userL := &system.User{Name: l.Username, Password: l.Password}
+	user, err := userService.Login(userL)
+	if err != nil {
+		response.FailWithMessage("用户名不存在或密码错误", c)
+		return
+	}
+	u.TokenNext(c, *user)
+	return
+
+}
+
+func (u *UserApi) TokenNext(c *gin.Context, user system.User) {
+
+}
 
 func (u *UserApi) CreateUser(c *gin.Context) {
 	var user system.User
