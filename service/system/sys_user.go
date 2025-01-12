@@ -22,13 +22,13 @@ func (userService *UserService) GetAllUser() (userList []*system.User, err error
 	return
 }
 
-func (userService *UserService) DeleteUserById(id string) (err error) {
-	err = global.YAGAMI_DB.Where("id=?", id).Delete(&system.User{}).Error
+func (userService *UserService) DeleteUserById(id int) (err error) {
+	err = global.YAGAMI_DB.Where("id = ?", id).Delete(&system.User{}).Error
 	return
 }
 
 func (userService *UserService) GetUserById(id string) (user *system.User, err error) {
-	if err = global.YAGAMI_DB.Where("id=?", id).First(user).Error; err != nil {
+	if err = global.YAGAMI_DB.Where("id = ?", id).First(user).Error; err != nil {
 		return nil, err
 	}
 	return

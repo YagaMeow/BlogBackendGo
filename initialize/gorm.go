@@ -24,6 +24,7 @@ func RegisterTables() {
 	db := global.YAGAMI_DB
 	err := db.AutoMigrate(
 		system.User{},
+		system.Article{},
 	)
 
 	if err != nil {
