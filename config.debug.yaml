@@ -1,0 +1,34 @@
+app:
+  env: local
+  port: 8889
+  app_name: yagami_blog_v1
+  app_url: http://localhost
+  db_type: mysql
+zap:
+  level: info
+  prefix: '[yagami_blog/server]'
+  format: console
+  director: log
+  encode_level: LowercaseColorLeveleEncoder
+  stacktrace_key: stacktrace
+  max_age: 1
+  show_line: true
+  log_in_console: true
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db_name: myDB
+  username: root
+  password: root
+  prefix: "t_"
+  singular: false
+  engine: ""
+  max_idle_conns: 10
+  max_open_conns: 100
+  log_mode: error
+  log_zap: false
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""

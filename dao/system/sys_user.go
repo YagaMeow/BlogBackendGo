@@ -8,5 +8,5 @@ type User struct {
 }
 
 func (u *User) TableName() string {
-	return "sys_user"
+	return "sys_users"
 }

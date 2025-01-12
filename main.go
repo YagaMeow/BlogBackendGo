@@ -25,6 +25,12 @@ func main() {
 
 	initialize.OtherInit()
 
+	if global.YAGAMI_DB != nil {
+		initialize.RegisterTables()
+		db, _ := global.YAGAMI_DB.DB()
+		defer db.Close()
+	}
+
 	fmt.Println("[Server]APP:", global.YAGAMI_CONFIG.App.AppName)
 	core.Run()
 }

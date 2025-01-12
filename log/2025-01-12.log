@@ -1,0 +1,47 @@
+[yagami_blog/server]2025/01/12 - 14:22:07.866	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:22:07.908	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:22:07.909	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:37:04.783	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:37:04.797	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:37:04.798	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:39:01.241	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:39:01.281	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:39:01.283	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:39:01.285	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:40:06.969	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:40:06.995	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:40:06.997	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:40:06.998	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:40:39.094	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:40:39.109	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:40:39.111	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:40:39.112	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:41:17.138	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:41:17.150	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:41:17.151	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:41:17.152	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:41:36.182	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:41:36.196	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:41:36.198	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:41:36.198	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:43:53.367	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:43:53.383	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:37	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:43:53.384	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:43:53.385	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:44:42.778	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:44:42.788	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:22	[SQL]初始化表单...
+[yagami_blog/server]2025/01/12 - 14:44:42.793	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:38	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:44:42.795	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:44:42.796	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:45:19.112	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:45:19.121	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:21	[SQL]初始化表单...
+[yagami_blog/server]2025/01/12 - 14:45:19.125	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:38	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:45:19.125	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:45:19.127	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:46:16.673	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:46:16.687	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:39	[SQL]注册表成功
+[yagami_blog/server]2025/01/12 - 14:46:16.687	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:46:16.688	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/12 - 14:47:00.969	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/12 - 14:47:00.986	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/12 - 14:47:00.987	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
