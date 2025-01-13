@@ -4,10 +4,15 @@ import (
 	"blog-backend/dao/common/response"
 	"blog-backend/dao/system"
 	systemReq "blog-backend/dao/system/request"
+	systemRes "blog-backend/dao/system/response"
+	"blog-backend/global"
+	"blog-backend/utils"
 	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 type UserApi struct{}
@@ -15,7 +20,7 @@ type UserApi struct{}
 func (u *UserApi) Login(c *gin.Context) {
 	var l systemReq.Login
 	err := c.ShouldBindJSON(&l)
-	key := c.ClientIP()
+	// key := c.ClientIP()
 
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
@@ -28,11 +33,21 @@ func (u *UserApi) Login(c *gin.Context) {
 	}
 	u.TokenNext(c, *user)
 	return
-
 }
 
 func (u *UserApi) TokenNext(c *gin.Context, user system.User) {
-
+	token, claims, err := utils.LoginToken(&user)
+	if err != nil {
+		global.YAGAMI_LOGGER.Error("获取token失败!", zap.Error(err))
+		response.FailWithMessage("获取token失败", c)
+		return
+	}
+	utils.SetToken(c, token, int(claims.RegisteredClaims.ExpiresAt.Unix()-time.Now().Unix()))
+	response.OkWithDetailed(systemRes.LoginResponse{
+		User:      user,
+		Token:     token,
+		ExpiresAt: claims.RegisteredClaims.ExpiresAt.Unix() * 1000,
+	}, "登录成功", c)
 }
 
 func (u *UserApi) CreateUser(c *gin.Context) {

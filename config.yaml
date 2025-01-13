@@ -32,3 +32,8 @@ redis:
   db: 0
   addr: 127.0.0.1:6379
   password: ""
+jwt:
+    signing-key: a821146b-0065-4497-9d1f-42ef02e53707
+    expires-time: 7d
+    buffer-time: 1d
+    issuer: qmPlus
