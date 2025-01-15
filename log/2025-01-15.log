@@ -1,0 +1,31 @@
+[yagami_blog/server]2025/01/15 - 14:50:15.227	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 14:50:15.262	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:31	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.Authority's field Children: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 14:50:15.265	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 14:50:15.267	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 14:53:18.306	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 14:53:18.322	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.Authority's field Children: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 14:53:18.326	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 14:53:18.326	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:02:01.890	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:02:01.904	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.User's field AuthorityId: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 15:02:01.905	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:02:01.906	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:09:40.968	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:09:40.983	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.User's field AuthorityId: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 15:09:40.985	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:09:40.986	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:13:11.290	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:13:11.305	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.User's field AuthorityId: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 15:13:11.308	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:13:11.310	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:13:42.306	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:13:42.319	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.User's field AuthorityId: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/15 - 15:13:42.323	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:13:42.324	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:18:19.399	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:18:19.413	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "unsupported data type: blog-backend/model/common.JSONMap"}
+[yagami_blog/server]2025/01/15 - 15:18:19.415	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:18:19.416	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/15 - 15:20:26.300	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/15 - 15:20:26.463	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/15 - 15:20:26.465	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}

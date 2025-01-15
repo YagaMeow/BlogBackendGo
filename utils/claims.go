@@ -1,9 +1,9 @@
 package utils
 
 import (
-	"blog-backend/dao/system"
-	systemReq "blog-backend/dao/system/request"
 	"blog-backend/global"
+	"blog-backend/model/system"
+	systemReq "blog-backend/model/system/request"
 	"net"
 	"time"
 
@@ -61,7 +61,7 @@ func GetClaims(c *gin.Context) (*systemReq.CustomClaims, error) {
 	return claims, err
 }
 
-func GetUserId(c *gin.Context) int {
+func GetUserId(c *gin.Context) uint {
 	if claims, exists := c.Get("claims"); !exists {
 		if cl, err := GetClaims(c); err != nil {
 			return 0
@@ -90,8 +90,8 @@ func GetUserName(c *gin.Context) string {
 func LoginToken(user system.Login) (token string, claims systemReq.CustomClaims, err error) {
 	j := &JWT{SigningKey: []byte(global.YAGAMI_CONFIG.JWT.SigningKey)}
 	claims = j.CreateClaims(systemReq.BaseClaims{
-		Id:   user.GetId(),
-		Name: user.GetName(),
+		Id:   user.GetUserId(),
+		Name: user.GetUsername(),
 	})
 	token, err = j.CreateToken(claims)
 	if err != nil {

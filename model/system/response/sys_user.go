@@ -1,6 +1,6 @@
 package response
 
-import "blog-backend/dao/system"
+import "blog-backend/model/system"
 
 type UserResponse struct {
 	User system.User `json:"user"`

@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"blog-backend/dao/system/request"
 	"blog-backend/global"
+	"blog-backend/model/system/request"
 	"errors"
 	"time"
 

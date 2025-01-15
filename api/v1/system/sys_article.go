@@ -1,7 +1,7 @@
 package system
 
 import (
-	"blog-backend/dao/system"
+	"blog-backend/model/system"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

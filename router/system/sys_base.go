@@ -24,9 +24,7 @@ func (s *BaseRouter) InitBaseRouter(Router *gin.RouterGroup) gin.IRoutes {
 	// 	})
 	// })
 
-	baseRouter.POST("users", v1.ApiGroupApp.SystemApiGroup.CreateUser)
-	baseRouter.GET("users", v1.ApiGroupApp.SystemApiGroup.GetUserList)
-	baseRouter.DELETE("users", v1.ApiGroupApp.SystemApiGroup.DeleteUser)
+	baseRouter.POST("login", v1.ApiGroupApp.SystemApiGroup.Login)
 
 	return baseRouter
 }

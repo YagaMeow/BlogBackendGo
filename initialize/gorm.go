@@ -1,8 +1,8 @@
 package initialize
 
 import (
-	"blog-backend/dao/system"
 	"blog-backend/global"
+	"blog-backend/model/system"
 	"fmt"
 
 	"go.uber.org/zap"
@@ -24,11 +24,14 @@ func RegisterTables() {
 	db := global.YAGAMI_DB
 	err := db.AutoMigrate(
 		system.User{},
+		system.BaseMenu{},
+		system.Authority{},
 		system.Article{},
 	)
 
 	if err != nil {
 		global.YAGAMI_LOGGER.Error("[SQL]注册表失败 ", zap.Error(err))
+		return
 	}
 
 	err = bizModel()

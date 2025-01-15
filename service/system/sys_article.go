@@ -1,8 +1,8 @@
 package system
 
 import (
-	"blog-backend/dao/system"
 	"blog-backend/global"
+	"blog-backend/model/system"
 )
 
 type ArticleService struct{}

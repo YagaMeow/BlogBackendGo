@@ -1,57 +1,62 @@
 package system
 
 import (
-	"blog-backend/dao/system"
 	"blog-backend/global"
+	"blog-backend/model/system"
+	"blog-backend/utils"
 	"errors"
 	"fmt"
+
+	"github.com/gofrs/uuid/v5"
+	"gorm.io/gorm"
 )
 
 type UserService struct {
 }
 
-func (userService *UserService) CreateUser(user *system.User) (err error) {
-	if err = global.YAGAMI_DB.Create(user).Error; err != nil {
-		return err
+var UserServiceApp = new(UserService)
+
+func (UserService) Register(u system.User) (userInter system.User, err error) {
+	var user system.User
+	if !errors.Is(global.YAGAMI_DB.Where("username = ?", u.UserName).First(&user).Error, gorm.ErrRecordNotFound) {
+		return userInter, errors.New("用户名已注册")
 	}
-	return
+
+	u.Password = utils.BcryptHash(u.Password)
+	u.UUID = uuid.Must(uuid.NewV4())
+	err = global.YAGAMI_DB.Create(&u).Error
+	return u, err
 }
 
-func (userService *UserService) GetAllUser() (userList []*system.User, err error) {
-	if err = global.YAGAMI_DB.Find(&userList).Error; err != nil {
-		return nil, err
-	}
-	return
-}
-
-func (userService *UserService) DeleteUserById(id int) (err error) {
-	err = global.YAGAMI_DB.Where("id = ?", id).Delete(&system.User{}).Error
-	return
-}
-
-func (userService *UserService) GetUserById(id string) (user *system.User, err error) {
-	if err = global.YAGAMI_DB.Where("id = ?", id).First(user).Error; err != nil {
-		return nil, err
-	}
-	return
-}
-
-func (userService *UserService) UpdateUser(user *system.User) (err error) {
-	err = global.YAGAMI_DB.Save(user).Error
-	return
-}
-
-func (userService *UserService) Login(user *system.User) (userInter *system.User, err error) {
+func (UserService) Login(u *system.User) (userInter *system.User, err error) {
 	if nil == global.YAGAMI_DB {
 		return nil, fmt.Errorf("db not init")
 	}
 
-	var u system.User
-	err = global.YAGAMI_DB.Where("username = ?", user.Name).First(&u).Error
+	var user system.User
+	err = global.YAGAMI_DB.Where("username = ?", u.UserName).First(&user).Error
 	if err == nil {
-		if ok := user.Password == u.Password; !ok {
+		if ok := utils.BcryptCheck(u.Password, user.Password); !ok {
 			return nil, errors.New("密码错误")
 		}
 	}
-	return &u, err
+	return &user, err
+}
+
+func (UserService) ChangePassword(u *system.User, newPassWord string) (userInter *system.User, err error) {
+	var user system.User
+	if err = global.YAGAMI_DB.Where("username = ?", u.UserName).First(&user).Error; err != nil {
+		return nil, err
+	}
+	if ok := utils.BcryptCheck(u.Password, user.Password); !ok {
+		return nil, errors.New("原密码错误")
+	}
+	user.Password = utils.BcryptHash(newPassWord)
+	err = global.YAGAMI_DB.Save(&user).Error
+	return &user, err
+}
+
+func (UserService) GetUserInfo(uuid uuid.UUID) (user system.User, err error) {
+	var reqUser system.User
+	return reqUser, err
 }
