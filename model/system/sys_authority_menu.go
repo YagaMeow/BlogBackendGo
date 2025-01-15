@@ -10,8 +10,8 @@ type Menu struct {
 }
 
 type AuthorityMenu struct {
-	MenuId      uint
-	AuthorityId uint
+	MenuId      string
+	AuthorityId string
 }
 
 func (AuthorityMenu) TableName() string {

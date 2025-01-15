@@ -10,6 +10,7 @@ type Authority struct {
 	AuthorityName string      `json:"authorityName"`
 	ParentId      *uint       `json:"parentId"`
 	Children      []Authority `json:"children" gorm:"-"`
+	BaseMenus     []BaseMenu  `json:menus gorm:"many2many:sys_authority_menus;"`
 	Users         []User      `json:"-" gorm:"many2many:sys_user_authority;"`
 	DefaultRouter string      `json:"defaultRouter"`
 }
