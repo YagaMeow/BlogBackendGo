@@ -1,0 +1,10 @@
+[yagami_blog/server]2025/01/17 - 12:36:40.124	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/17 - 12:36:40.163	error	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/gorm.go:33	[SQL]注册表失败 	{"error": "invalid field found for struct blog-backend/model/system.Authority's field BaseMenus: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[yagami_blog/server]2025/01/17 - 12:36:40.169	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/17 - 12:36:40.170	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/17 - 12:47:37.612	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/17 - 12:47:37.719	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/17 - 12:47:37.720	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}
+[yagami_blog/server]2025/01/17 - 12:48:33.264	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/main.go:22	server run success on 	{"zap_log": "log"}
+[yagami_blog/server]2025/01/17 - 12:48:33.431	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[yagami_blog/server]2025/01/17 - 12:48:33.434	info	C:/Users/18504/Documents/CSSMaster/blog/BlogBackendGo/core/server.go:25	server run success on	{"address": ":8889"}

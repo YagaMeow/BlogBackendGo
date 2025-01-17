@@ -116,6 +116,9 @@ func (AuthorityService) GetStructAuthorityList(authprityID uint) (list []uint, e
 func (AuthorityService) CheckAuthorityIDAuth(authorityID, targetID uint) (err error) {
 	authIDS, err := AuthorityServiceApp.GetStructAuthorityList(authorityID)
 	var hasAuth bool = false
+	if err != nil {
+		return err
+	}
 	for _, v := range authIDS {
 		if v == targetID {
 			hasAuth = true
@@ -128,13 +131,31 @@ func (AuthorityService) CheckAuthorityIDAuth(authorityID, targetID uint) (err er
 	return nil
 }
 
+func (AuthorityService) GetAuthorityInfo(auth system.Authority) (sa system.Authority, err error) {
+	err = global.YAGAMI_DB.First(&sa, "authority_id = ?", auth.AuthorityId).Error
+	return
+}
+
+func (AuthorityService) SetMenuAuthority(auth *system.Authority) (err error) {
+	var s system.Authority
+	global.YAGAMI_DB.First(&s, "authority_id = ?", auth.AuthorityId)
+	err = global.YAGAMI_DB.Model(&s).Association("BaseMenus").Replace(&auth.BaseMenus)
+	return
+}
+
 func (AuthorityService) FindChildrenAuthority(authority *system.Authority) (err error) {
-	var authorities []system.Authority
 	if err = global.YAGAMI_DB.Where("parent_id = ?", authority.AuthorityId).Find(&authority.Children).Error; err != nil {
 		return err
 	}
-	for k := range authorities {
-		err = AuthorityServiceApp.FindChildrenAuthority(&authorities[k])
+	for k := range authority.Children {
+		err = AuthorityServiceApp.FindChildrenAuthority(&authority.Children[k])
 	}
 	return err
+}
+
+func (AuthorityService) GetParentAuthorityID(authorityID uint) (parentID uint, err error) {
+	var authority system.Authority
+	err = global.YAGAMI_DB.First(&authority, "authority_id = ?", authorityID).Error
+	parentID = *authority.ParentId
+	return
 }
