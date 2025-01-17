@@ -3,6 +3,7 @@ package global
 import (
 	"blog-backend/config"
 
+	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -15,4 +16,5 @@ var (
 	YAGAMI_LOGGER *zap.Logger
 	YAGAMI_DB     *gorm.DB
 	YAGAMI_REDIS  *redis.Client
+	YAGAMI_ROUTER gin.RoutesInfo
 )

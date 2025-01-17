@@ -1,6 +1,7 @@
 package initialize
 
 import (
+	"blog-backend/global"
 	"blog-backend/router"
 	"net/http"
 
@@ -18,6 +19,8 @@ func Routers() *gin.Engine {
 	})
 
 	systemRouter.InitBaseRouter(PublicGroup)
+
+	global.YAGAMI_ROUTER = Router.Routes()
 
 	return Router
 }
